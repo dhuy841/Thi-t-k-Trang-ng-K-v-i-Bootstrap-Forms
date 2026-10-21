@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tạo tài khoản mới bằng biểu mẫu đăng ký.">
+    <title>Đăng ký tài khoản</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    >
+    <style>
+      body {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 12% 12%, rgba(13, 110, 253, 0.1), transparent 28rem),
+          #f4f7fb;
+      }
+
+      .registration-card {
+        max-width: 720px;
+        border: 0;
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 3rem rgba(28, 44, 74, 0.1);
+      }
+
+      .form-control,
+      .form-select {
+        min-height: 48px;
+      }
+
+      .form-check-input {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <section class="card registration-card mx-auto">
+            <div class="card-body p-4 p-md-5">
+              <header class="text-center mb-4">
+                <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
+                  BẮT ĐẦU MIỄN PHÍ
+                </span>
+                <h1 class="h2 fw-bold mb-2">Tạo tài khoản của bạn</h1>
+                <p class="text-muted mb-0">Điền thông tin bên dưới để tham gia cùng chúng tôi.</p>
+              </header>
+
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="fullName" class="form-label fw-semibold">Họ và tên</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Nguyễn Văn An"
+                      autocomplete="name"
+                      required
+                    >
+                    <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label fw-semibold">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="ban@example.com"
+                      autocomplete="email"
+                      required
+                    >
+                    <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      name="password"
+                      placeholder="Tối thiểu 8 ký tự"
+                      autocomplete="new-password"
+                      minlength="8"
+                      required
+                    >
+                    <div class="invalid-feedback">Mật khẩu cần có ít nhất 8 ký tự.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Nhập lại mật khẩu"
+                      autocomplete="new-password"
+                      required
+                    >
+                    <div class="invalid-feedback">Vui lòng xác nhận mật khẩu.</div>
+                  </div>
+
+                  <fieldset class="col-12">
+                    <legend class="form-label fw-semibold fs-6 mb-2">Giới tính</legend>
+                    <div class="d-flex flex-wrap gap-4">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female" required>
+                        <label class="form-check-label" for="genderFemale">Nữ</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                        <label class="form-check-label" for="genderMale">Nam</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                        <label class="form-check-label" for="genderOther">Khác</label>
+                      </div>
+                    </div>
+                    <div class="invalid-feedback">Vui lòng chọn giới tính.</div>
+                  </fieldset>
+
+                  <fieldset class="col-12">
+                    <legend class="form-label fw-semibold fs-6 mb-2">Sở thích</legend>
+                    <div class="d-flex flex-wrap gap-4">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests" id="interestTechnology" value="technology">
+                        <label class="form-check-label" for="interestTechnology">Công nghệ</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests" id="interestTravel" value="travel">
+                        <label class="form-check-label" for="interestTravel">Du lịch</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="interests" id="interestReading" value="reading">
+                        <label class="form-check-label" for="interestReading">Đọc sách</label>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <div class="col-12">
+                    <label for="country" class="form-label fw-semibold">Quốc gia</label>
+                    <select class="form-select" id="country" name="country" required>
+                      <option value="" selected disabled>Chọn quốc gia của bạn</option>
+                      <option value="vn">Việt Nam</option>
+                      <option value="us">Hoa Kỳ</option>
+                      <option value="jp">Nhật Bản</option>
+                      <option value="kr">Hàn Quốc</option>
+                      <option value="other">Quốc gia khác</option>
+                    </select>
+                    <div class="invalid-feedback">Vui lòng chọn quốc gia.</div>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <button class="btn btn-primary btn-lg w-100 fw-semibold" type="submit">
+                      Tạo tài khoản
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <p class="text-center text-muted small mt-4 mb-0">
+                Bằng cách đăng ký, bạn đồng ý với các điều khoản sử dụng của chúng tôi.
+              </p>
+            </div>
+          </section>
+          <p class="text-center text-muted small mt-4 mb-0">Đã có tài khoản? <a href="#" class="link-primary text-decoration-none">Đăng nhập</a></p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      (() => {
+        const form = document.querySelector(".needs-validation");
+        const password = document.querySelector("#password");
+        const confirmPassword = document.querySelector("#confirmPassword");
+
+        confirmPassword.addEventListener("input", () => {
+          confirmPassword.setCustomValidity(
+            confirmPassword.value === password.value ? "" : "Mật khẩu xác nhận chưa khớp."
+          );
+        });
+        password.addEventListener("input", () => {
+          confirmPassword.setCustomValidity(
+            confirmPassword.value === password.value ? "" : "Mật khẩu xác nhận chưa khớp."
+          );
+        });
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        });
+      })();
+    </script>
+  </body>
+</html>
